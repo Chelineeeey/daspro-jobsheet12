@@ -15,5 +15,7 @@ public class Kafe05{
 
     public static void main(String[] args){
         menu();
+        menu();
+        menu();
     }
 }
