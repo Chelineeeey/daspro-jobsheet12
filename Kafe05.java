@@ -1,5 +1,7 @@
 package Jobsheet12;
 
+import java.util.Scanner;
+
 public class Kafe05{
     public static void menu(String namaPelanggan, boolean isMember, int jamKunjung){
         System.out.println("Selamat datang, " + namaPelanggan + "!");
@@ -24,7 +26,15 @@ public class Kafe05{
     }
 
     public static void main(String[] args){
-        menu("Andi", true, 15);
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nama Pelanggan : ");
+        String nama = sc.nextLine();
+        System.out.print("Member (y/n)   : ");
+        boolean isMember = sc.nextLine().trim().equalsIgnoreCase("y");
+        System.out.print("Jam kunjung    : ");
+        int jam = sc.nextInt();
+
+        menu(nama, isMember, jam);
+        sc.close();
     }
 }
