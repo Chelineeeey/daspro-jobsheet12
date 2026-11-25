@@ -1,11 +1,15 @@
 package Jobsheet12;
 
 public class Kafe05{
-    public static void menu(String namaPelanggan, boolean isMember){
+    public static void menu(String namaPelanggan, boolean isMember, int jamKunjung){
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember){
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
+        if (jamKunjung >= 14 && jamKunjung <=16){
+                System.out.println("Happy Hour! Diskon 20% untuk semua minuman");
         }
 
         System.out.println("===== MENU RESTO KAFE =====");
@@ -20,7 +24,7 @@ public class Kafe05{
     }
 
     public static void main(String[] args){
-        menu("Andi", true);
+        menu("Andi", true, 15);
         
     }
 }
