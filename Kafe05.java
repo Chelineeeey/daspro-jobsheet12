@@ -44,6 +44,11 @@ public class Kafe05{
                 break;
             }
 
+            if (pilihanMenu < 1 || pilihanMenu > 6){
+                System.out.println("Menu tidak tersedia");
+                continue;
+            }
+
             System.out.print("Masukkan jumlah item yang ingin dipesan: ");
             int banyakItem = sc.nextInt();
 
