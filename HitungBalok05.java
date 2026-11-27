@@ -44,6 +44,15 @@ public class HitungBalok05 {
         System.out.println("selisih(10, 3) = " + selisih(10, 3));
         System.out.println("selisih(3, 10) = " + selisih(3, 10));
 
+        System.out.println("\n=== 3 Balok dengan ukuran berbeda ===");
+        int[][] balok = {{4, 3, 5}, {6, 2, 7}, {10, 5, 3}};
+        for (int i = 0; i < balok.length; i++){
+            int bp = balok[i][0], bl = balok[i][1], bt = balok[i][2];
+            System.out.println("Balok " + (i + 1) + " (" + bp + " x " + bl + " x " + bt + ")"
+                    + " -> Luas permukaan = " + hitungLuasPermukaanBalok(bp, bl, bt)
+                    + ", Volume = " + hitungVolume(bt, bp, bl));
+        }
+
         input.close();
     }
 }
